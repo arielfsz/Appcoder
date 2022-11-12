@@ -3,17 +3,18 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
+
 def inicio(request):
-    return render(request,"appcoder/index.html")
+    return render(request, "appcoder/index.html")
 
 def cursos(request):
-    return HttpResponse("Estás en cursos")
-
+    return render(request, "appcoder/cursos.html")
+    
 def estudiantes(request):
-    return HttpResponse("Estás en estudiantes")
+    return render(request, "appcoder/estudiantes.html")
 
 def profesores(request):
-    return HttpResponse("Estás en profesores")
+    return render(request, "appcoder/profesores.html")
 
 def entregables(request):
-    return HttpResponse("Estás en entregables")
+    return render(request, "appcoder/entregables.html")
