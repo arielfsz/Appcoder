@@ -54,5 +54,27 @@ def creacion_profesores(request):
 
 
 
+
+
+
+def buscar_curso(request):
+
+    return render(request, "appcoder/busqueda_cursos.html")
+    
+
+def resultados_busqueda_cursos(request):
+    nombre_curso = request.GET["nombre_curso"]
+
+    cursos = Curso.objects.filter(nombre__icontains=nombre_curso)
+
+    return render(request, "appcoder/resultados_busqueda_cursos.html", {"cursos": cursos})
+    pass
+
+
+
+
+
+
+
 def entregables(request):
     return render(request, "appcoder/entregables.html")

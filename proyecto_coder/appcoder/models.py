@@ -11,13 +11,13 @@ class Estudiante(models.Model):
 
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    emails = models.EmailField
+    email = models.EmailField()
 
 class Profesor(models.Model):
 
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    emails = models.EmailField
+    email = models.EmailField()
     profesion = models.CharField(max_length=100)
 
 class Entregable(models.Model):
